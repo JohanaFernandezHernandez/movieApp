@@ -1,24 +1,40 @@
-import './style.css'
-import javascriptLogo from './javascript.svg'
-import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.js'
+import './style.css';
+import viteLogo from '/vite.svg';
+import { setupNavbar } from './js/navBar.js';
+import { fetchData } from './api/api.js';
 
-document.querySelector('#app').innerHTML = `
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-      <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
-    </a>
-    <h1>Hello Vite!</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite logo to learn more
-    </p>
-  </div>
-`
+// Configurar la barra de navegación
+setupNavbar();
 
-setupCounter(document.querySelector('#counter'))
+// Obtener el elemento con ID 'app'
+const appContainer = document.querySelector('#app');
+
+// Realizar la llamada a la API y procesar los datos
+fetchData()
+  .then(data => {
+    // Hacer algo con los datos obtenidos, por ejemplo: Poster
+    console.log(data.Search);
+    const resp = data.Search || [];
+
+    // const {Search} = data;
+
+    const searchHtml = resp.map(movie=>{
+      return`
+        <div>
+          <!-- Tu contenido aquí utilizando los datos de la API -->
+          <h2>${movie.Title}</h2>
+          <img src="${movie.Poster}"></img>
+          <p>${movie.Year}</p>
+          <p>${movie.imdbID}</p>
+          <p>${movie.Type}</p>
+
+        </div>
+      `;
+    });
+    appContainer.innerHTML = searchHtml.join('');
+  })
+  .catch(error => {
+    // Manejar errores
+    console.error(error);
+    appContainer.innerHTML = '<p>Error al obtener datos de la API.</p>';
+  });
