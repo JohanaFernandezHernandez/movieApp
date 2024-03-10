@@ -1,0 +1,27 @@
+.navbar {
+    /* padding: 10px; */
+    display: flex;
+    border-bottom: solid 1px;
+    align-items: center;
+    background: #0f0c29; 
+    background: -webkit-linear-gradient(to top, #24243e, #302b63,#0f0c29); 
+    background: linear-gradient(to top,#24243e,#302b63,#0f0c29); 
+  }
+  
+  .navbar-content {
+    display: flex;
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+    justify-content: space-between;
+    /* padding: 20px 0; */
+  }
+  
+  .navbar-content li {
+    list-style: none;
+  }
+  
+  .navbar-logo {
+    max-width: 100px;
+  }
+  
