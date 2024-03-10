@@ -1,14 +1,15 @@
 // js/api/api.js
 const apiKey = "3b67358c";
 
-export async function fetchData() {
-    const search ="avengers"
-  if (search === "") return null;
+export async function fetchData(searchMovie) {
+
+  const url = `http://www.omdbapi.com/?apikey=${apiKey}&s=${searchMovie}`;
+
+  if (searchMovie === "") return null;
 
   try {
-    const response = await fetch(
-      `http://www.omdbapi.com/?apikey=${apiKey}&s=${search}`
-    );
+    const response = await fetch(url);
+    
     if (!response.ok) {
       throw new Error("Error en la solicitud a la API de OMDb");
     }

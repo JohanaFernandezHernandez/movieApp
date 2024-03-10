@@ -6,9 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MovieApp</title>
   </head>
+  <header id="navbar"></header>
   <body >
-    <header id="navbar"></header>
-    <div id="app"></div>
+    <div class="container-search">
+      <label for="searchInput">Buscar:</label>
+      <input
+      class="input"
+      type="text"
+      id="searchInput"
+      placeholder="Avengers, Marvel, Batman..."
+      />
+    </div>
+    <div class="card-grid" id="app"></div>
     <script type="module" src="/main.js"></script>
   </body>
 </html>

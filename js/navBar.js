@@ -1,4 +1,5 @@
 import "../css/navbar.css";
+import Rollopeli from "/img/Rollopeli.jpg"
 
 export function setupNavbar() {
     const navbarElement = document.querySelector('#navbar');
@@ -9,9 +10,4 @@ export function setupNavbar() {
       </ul>
     </nav>
   `;
-  // Otro código para la inicialización de la barra de navegación
-  console.log('Navbar inicializado');
-
-
-
 }
