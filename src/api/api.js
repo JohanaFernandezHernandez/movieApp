@@ -1,23 +1,18 @@
 // js/api/api.js
-const apiKey = "3b67358c";
+const apiKey = import.meta.env.VITE_API_KEY;
 
 export async function fetchData(searchMovie) {
 
   const url = `http://www.omdbapi.com/?apikey=${apiKey}&s=${searchMovie}`;
-
   if (searchMovie === "") return null;
 
   try {
-    const response = await fetch(url);
-    
-    if (!response.ok) {
-      throw new Error("Error en la solicitud a la API de OMDb");
-    }
-
-    const data = await response.json();
+    const resp = await fetch(url);
+    const data = await resp.json();
     return data;
+
   } catch (error) {
-    console.error("Error al obtener datos de la API de OMDb:", error);
+    console.error("Error al obtener datos de la API ", error);
     throw error;
   }
 }

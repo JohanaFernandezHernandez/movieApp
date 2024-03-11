@@ -1,12 +1,11 @@
 import { setupNavbar } from "./components/navBar.js";
 import { searchMovies } from "./components/search.js";
 
+import "./styles/index.css";
 
-import "./styles/main.css";
-import "./styles/style.css";
-
-// Implementar la barra de navegación
+// Implementa barra de navegación
 setupNavbar();
 
+//Implementa la busqueda de las peliculas
 searchMovies()
 

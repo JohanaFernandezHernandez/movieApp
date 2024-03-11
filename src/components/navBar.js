@@ -1,15 +1,15 @@
 import "../styles/navbar.css";
-// import Rollopeli from "../public/assets/Rollopeli.jpg";
 
 export function setupNavbar() {
   const navbarElement = document.querySelector("#navbar");
   navbarElement.innerHTML = `
     <nav class="navbar">
-      <ul class="navbar-content">
-      <li><img class="navbar-logo" src="/assets/logo.png" alt="logo"/></li>
-
-        <li><a href="#">Inicio</a></li>
+    <div class="navbar-content">
+      <img class="navbar-logo" src="/assets/cine.png" alt="logo"/>
+      <ul class="navbar-menu">
+        <li><a href="#">Login</a></li>
       </ul>
+      </div>
     </nav>
   `;
 }
