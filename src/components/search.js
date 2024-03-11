@@ -18,7 +18,11 @@ export function searchMovies() {
         //mostrar peliculas en el html
         const moviesHtml = Search.map(({ Title, Year, Poster }) => `
           <div class="card">
-            <img class="card-poster" src="${Poster}" alt="${Title} Poster">
+            <img class="card-poster" 
+            src=${Poster && Poster !== "N/A"
+            ? Poster
+            :"/assets/imgDefault.jpg"} 
+            alt="${Title} Poster">
             <h2>${Title}</h2>
             <p>${Year}</p>
           </div>
