@@ -43,7 +43,7 @@ export function searchMovies() {
     } else {
       // si no incluye 3 caracteres mostrara esto al usuario
       appContainer.innerHTML =
-        "<p>Ingrese al menos 3 letras para buscar películas.</p>";
+        "<p>Ingrese al menos 3 caracteres para buscar tu pelicula.</p>";
     }
   });
 }
