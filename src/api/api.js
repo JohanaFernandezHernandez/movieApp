@@ -1,4 +1,3 @@
-// js/api/api.js
 const apiKey = import.meta.env.VITE_API_KEY;
 
 export async function fetchData(searchMovie) {

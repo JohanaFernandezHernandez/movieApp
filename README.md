@@ -4,7 +4,7 @@ Aplicacion que te permite buscar Pelicas por su titulo y esto lo realizamos atra
 ## Instalacion
 1. Clona el repositorio.
 2. Instala las dependencias con "npm install".
-3. Antes de iniciar el proyecto, crea un archivo .env en la raíz del proyecto y agrega tu clave de API de la siguiente manera:
+3. Antes de iniciar el proyecto, agrega el valor de la clave de API asi:
 
         VITE_API_KEY=TU_CLAVE_DE_API
 
