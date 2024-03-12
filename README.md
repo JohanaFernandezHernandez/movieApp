@@ -12,4 +12,6 @@ Aplicacion que te permite buscar Pelicas por su titulo y esto lo realizamos atra
 
 
 ## Enlace desplegado en Netlyfy
-Aqui te dejo el enlace de la aplicacion desplegada en Netlify:
+Aqui te dejo el enlace de la aplicacion desplegada en Netlify: 
+
+https://moviejohana.netlify.app/
